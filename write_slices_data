@@ -1,0 +1,21 @@
+#!MC 1400
+# Created by Tecplot 360 build 14.0.2.35002
+$!VarSet |MFBD| = 'C:\Users\1234\Documents'
+$!Varset |NUMLOOP|=0
+$!LOOP 70
+$!VarSet |num|=(0+0.2*|NUMLOOP|)
+$!VarSet |num1|=(6+|NUMLOOP|)
+$!WRITEDATASET  "H:\graduate_project\votex_core\find_votex\data4\M6ground\x_|num|.dat"
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  INCLUDECUSTOMLABELS = NO
+  ASSOCIATELAYOUTWITHDATAFILE = NO
+  ZONELIST =  [|num1|]
+  VARPOSITIONLIST =  [2-3,6-7,35]
+  BINARY = NO
+  USEPOINTFORMAT = YES
+  PRECISION = 9
+  TECPLOTVERSIONTOWRITE = TECPLOTCURRENT
+$!VarSet |NUMLOOP|+=1
+$!ENDLOOP
+$!RemoveVar |MFBD|
